@@ -1,0 +1,9 @@
+Flask
+scikit-learn
+numpy
+tensorflow
+seaborn
+scipy
+matplotlib
+datetime
+pickle
