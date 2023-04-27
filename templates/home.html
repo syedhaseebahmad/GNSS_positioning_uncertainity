@@ -1,3 +1,55 @@
-<h1>
-    Home
-</h1>
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>GNSS positioning Uncertainity Estimation</h1>
+ 
+
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="Psr" placeholder="Psr" required="required" /><br>
+    	<input type="text" name="Crp" placeholder="Crp" required="required" /><br>
+        <input type="text" name="Doppler" placeholder="Doppler" required="required" /><br>
+        <input type="text" name="Snr" placeholder="Snr" required="required" /><br>
+        <input type="text" name="Elevation" placeholder="Elevation" required="required" /><br>
+        <input type="text" name="DCrp" placeholder="DCrp" required="required" /><br>
+        <input type="text" name="WlsPsrR" placeholder="WlsPsrR" required="required" /><br>
+        <input type="text" name="WlsNPsrR" placeholder="WlsNPsrR" required="required" /><br>
+        <input type="text" name="D_Psr_Crp" placeholder="D_Psr_Crp" required="required" /><br>
+        <input type="text" name="D_Doppler_DCrp" placeholder="D_Doppler_DCrp" required="required" /><br>
+        <input type="text" name="PRC" placeholder="PRC" required="required" /><br>
+        <input type="text" name="LT_CN0" placeholder="LT_CN0" required="required" /><br>
+        <input type="text" name="Sigma_CN0" placeholder="Sigma_CN0" required="required" /><br>
+        <input type="text" name="nbsat" placeholder="nbsat" required="required" /><br>
+        <input type="text" name="SFM" placeholder="SFM" required="required" /><br>
+        <input type="text" name="variance_snr" placeholder="variance_snr" required="required" /><br>
+        <input type="text" name="variance_PrCorrected" placeholder="variance_PrCorrected" required="required" /><br>
+        <input type="text" name="variance_PrR" placeholder="variance_PrR" required="required" /><br>
+       
+       
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>
